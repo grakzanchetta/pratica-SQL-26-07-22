@@ -23,7 +23,10 @@ JOIN users ON experiences."userId" = users.id
 WHERE users.id = 50
 AND experiences."endDate" IS NULL;
 
-
-
+--Exercício 2
+SELECT testimonials.id AS id, u1.name AS writer, u2.name AS recipient, message
+FROM testimonials 
+JOIN users u1 ON testimonials."writerId" = u1.id
+JOIN users u2 ON testimonials."recipientId" = u2.id;
 
 
